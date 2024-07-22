@@ -1,0 +1,12 @@
+[user]
+	name = Elton Santana
+	email = elton.garcia.s@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[pull]
+	rebase = true
