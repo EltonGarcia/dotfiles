@@ -1,27 +1,25 @@
 #!/bin/bash
 
+PC="eDP-1"
+DELL="DP-1-2"
+ARZOPA="HDMI-1-0"
+
 set_default(){
-    xrandr --output DP-0 --off --output DP-1 --off \
-        --output DP-2 --mode 1920x1080 --pos 1920x0 --rotate normal \
-        --output DP-3 --off \
-        --output HDMI-0 --mode 1920x1080 --pos 1920x1080 --rotate normal \
-        --output eDP-1-1 --mode 1920x1080 --pos 0x0 --rotate normal
+    xrandr --output $PC --mode 1920x1080 --pos 0x0 --rotate normal \
+        --output $DELL --primary --mode 1920x1080 --pos 1920x0 --rotate normal \
+        --output $ARZOPA --mode 1920x1080 --pos 1920x1080 --rotate normal
 }
 
 set_pair(){
-    xrandr --output DP-0 --off --output DP-1 --off \
-        --output DP-2 --mode 1920x1080 --pos 0x0 --rotate normal \
-        --output DP-3 --off \
-        --output HDMI-0 --mode 1920x1080 --pos 1350x1080 --rotate normal \
-        --output eDP-1-1 --mode 1920x1080 --pos 0x0 --rotate normal
+    xrandr --output $PC --mode 1920x1080 --pos 0x0 --rotate normal \
+        --output $DELL --mode 1920x1080 --pos 0x0 --rotate normal \
+        --output $ARZOPA --mode 1920x1080 --pos 1350x1080 --rotate normal
 }
 
 set_mirror(){
-    xrandr --output DP-0 --off --output DP-1 --off \
-        --output DP-2 --mode 1920x1080 --pos 0x0 --rotate normal \
-        --output DP-3 --off \
-        --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal \
-        --output eDP-1-1 --mode 1920x1080 --pos 0x0 --rotate normal
+    xrandr --output $PC --mode 1920x1080 --pos 0x0 --rotate normal \
+        --output $DELL --mode 1920x1080 --pos 0x0 --rotate normal \
+        --output $ARZOPA --mode 1920x1080 --pos 0x0 --rotate normal
 }
 
 # Function to display script usage
