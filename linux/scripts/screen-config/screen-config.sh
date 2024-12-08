@@ -4,6 +4,12 @@ PC="eDP-1"
 DELL="DP-1-2"
 ARZOPA="HDMI-1-0"
 
+set_uniq(){
+    xrandr --output $PC --mode 1920x1080 --pos 0x0 --rotate normal \
+        --output $DELL --off \
+        --output $ARZOPA --off
+}
+
 set_default(){
     xrandr --output $PC --mode 1920x1080 --pos 0x0 --rotate normal \
         --output $DELL --primary --mode 1920x1080 --pos 1920x0 --rotate normal \
@@ -26,12 +32,14 @@ set_mirror(){
 display_usage() {
     echo "Usage: sudo $0 [OPTIONS]"
     echo "OPTIONS:"
+    echo "  -u, --uniq     Disable the extra screens and keep only the integrated"          
     echo "  -m, --mirror   Set screens in mirror mode"          
     echo "  -d, --default  Apply screen defaut config for 3 monitors"
     echo "  -p, --pair     Apply screen config for 2 monitors, mirror DP-2 and set HDMI position"
     echo "  --help         Display this help message."
 }
 
+UNIQ="UNIQ"
 DEFAULT="DEFAULT"
 MIRROR="MIRROR"
 PAIR="PAIR"
@@ -46,7 +54,11 @@ fi
 # Parse command-line options
 while [[ $# -gt 0 ]]; do
     key="$1"
-    case $key in
+    case "$key" in
+        -u|--uniq)
+            SET_CONFIG="$UNIQ"
+            shift
+            ;;
         -m|--mirror)
             SET_CONFIG="$MIRROR"
             shift # past argument
@@ -71,6 +83,9 @@ while [[ $# -gt 0 ]]; do
 done
 
 case "$SET_CONFIG" in
+    "$UNIQ")
+        set_uniq
+        ;; 
     "$DEFAULT")
         set_default
         ;;
