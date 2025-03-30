@@ -3,10 +3,10 @@
 # TO REMEMBER: Leverage on ChatGPT to modify it.
 
 # Get right HOME folder for user, otherwise, /root will be assumed because of the sudo
-HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
+#HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
 
 # Default values
-DEFAULT_SOURCE_FOLDER="$HOME/Workspace/Scripts/Linux"
+DEFAULT_SOURCE_FOLDER="$HOME/workspace/dotfiles/linux/scripts"
 DEFAULT_DESTINATION_FOLDER="/usr/local/bin"
 
 # Function to display script usage
