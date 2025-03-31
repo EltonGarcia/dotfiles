@@ -1,4 +1,5 @@
 [user]
+	signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAlzI+RD+fKfc3w3z+NdKfrlbygm0VdUYGhxByWp3qWV"
 	name = Elton Santana
 	email = elton.garcia.s@gmail.com
 [filter "lfs"]
@@ -10,3 +11,8 @@
 	insteadOf = https://github.com/
 [pull]
 	rebase = true
+[gpg]
+	format = ssh
+# Set-up to sign commits
+#[commit]
+#        gpgsign = true
