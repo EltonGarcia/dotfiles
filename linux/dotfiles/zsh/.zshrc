@@ -14,9 +14,15 @@ HISTFILE=~/.config/histfile
 HISTSIZE=100000
 SAVEHIST=100000
 setopt beep
+# End of lines configured by zsh-newuser-install
+
+# Bindkeys
 #bindkey -v # set vim keybindings
 bindkey -e # set emacs keybindings
-# End of lines configured by zsh-newuser-install
+
+# aliases
+#   git
+alias gst='git status'
 
 # bitwarden
 export SSH_AUTH_SOCK="$HOME"/snap/bitwarden/current/.bitwarden-ssh-agent.sock
