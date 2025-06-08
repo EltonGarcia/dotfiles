@@ -28,10 +28,13 @@ alias vim='nvim'
 # wezterm
 alias wezterm='flatpak run org.wezfurlong.wezterm'
 source "$HOME"/.config/wezterm/assets/shell-integration/wezterm.sh
+# generated from:
+#   wezterm shell-completion --shell zsh
+source "$HOME"/.config/zsh/wezterm.zsh
 
 # zsh
-source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source "$HOME/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # starship 
 eval "$(starship init zsh)"
