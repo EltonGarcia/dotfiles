@@ -1,0 +1,3 @@
+wezfurlong/wezterm-nightly
+solopasha/hyprland
+erikreider/SwayNotificationCenter

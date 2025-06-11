@@ -1,0 +1,17 @@
+stow
+openssh-server
+hyprland
+wofi
+waybar
+fontawesome-fonts
+
+# wezfurlong/wezterm-nightly corp
+wezterm
+
+# solopasha/hyprland corp
+hyprshot
+hyprlock
+hypridle
+
+# erikreider/SwayNotificationCenter corp
+SwayNotificationCenter
