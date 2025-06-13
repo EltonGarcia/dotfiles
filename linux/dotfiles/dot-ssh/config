@@ -1,0 +1,39 @@
+Host *
+  KexAlgorithms curve25519-sha256,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256
+
+Host lima-default
+  IdentityFile "/home/elton/.lima/_config/user"
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+  NoHostAuthenticationForLocalhost yes
+  GSSAPIAuthentication no
+  PreferredAuthentications publickey
+  Compression no
+  BatchMode yes
+  IdentitiesOnly yes
+  Ciphers "^aes128-gcm@openssh.com,aes256-gcm@openssh.com"
+  User elton
+  ControlMaster auto
+  ControlPath "/home/elton/.lima/default/ssh.sock"
+  ControlPersist yes
+  ForwardX11 yes
+  Hostname 127.0.0.1
+  Port 60022
+
+Host remote-vm-host
+  Hostname 127.0.0.1
+  User elton
+  # TCP method
+  #LocalForward 16509 localhost:16509
+  # Socket method
+  LocalForward /tmp/libvirt-sock /var/run/libvirt/libvirt-sock
+
+Host libvirt-remote
+  HostName 192.168.1.100       # Replace with your libvirt host's IP
+  User elton                   # SSH user on the libvirt host
+  IdentityFile ~/.ssh/id_rsa   # Replace with your SSH key (if not using Lima's)
+  ForwardX11 yes               # Optional: for GUI apps
+  #LocalForward /tmp/libvirt-sock /var/run/libvirt/libvirt-sock  # Unix socket forwarding
+  #LocalForward /home/elton/.lima/default/ssh.sock /var/run/libvirt/libvirt-sock  # Unix socket forwarding
+  # Alternative (TCP forwarding, uncomment if needed):
+  LocalForward 16509 localhost:16509
