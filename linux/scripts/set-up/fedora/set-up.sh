@@ -9,7 +9,7 @@ PKGS_FILE="dnf-packages.txt"
 COPRS_FILE="corps.txt"
 
 clone_dotfiles(){
-  mkdir "$WRKSPC_DIR"
+  mkdir -p "$WRKSPC_DIR"
   cd "$WRKSPC_DIR"
   git clone git@github.com:EltonGarcia/dotfiles.git
 }
