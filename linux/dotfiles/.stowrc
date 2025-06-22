@@ -1,2 +1,3 @@
---target=$HOME/.config
+--target=$HOME/
+--dotfiles
 --ignore=.stowrc
