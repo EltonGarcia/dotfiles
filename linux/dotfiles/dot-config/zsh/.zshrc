@@ -25,14 +25,21 @@ bindkey -e # set emacs keybindings
 alias gst='git status'
 
 # bitwarden
-export SSH_AUTH_SOCK="$HOME"/snap/bitwarden/current/.bitwarden-ssh-agent.sock
+#export SSH_AUTH_SOCK="$HOME"/.bitwarden-ssh-agent.sock
+export SSH_AUTH_SOCK="$HOME"/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
+
+# hyprland
+# UWSM - Universal Wayland Session Manager
+if uwsm check may-start && uwsm select; then
+	exec uwsm start default
+fi
 
 # neovim
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+#export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 alias vim='nvim'
 
 # wezterm
-alias wezterm='flatpak run org.wezfurlong.wezterm'
+#alias wezterm='flatpak run org.wezfurlong.wezterm'
 source "$HOME"/.config/wezterm/assets/shell-integration/wezterm.sh
 # generated from:
 #   wezterm shell-completion --shell zsh
