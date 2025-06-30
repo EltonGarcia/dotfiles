@@ -35,6 +35,7 @@ if uwsm check may-start && uwsm select; then
 fi
 
 # neovim
+export EDITOR='nvim'
 #export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 alias vim='nvim'
 
