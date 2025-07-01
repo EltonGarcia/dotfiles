@@ -1,0 +1,17 @@
+# alias imported in bash and zsh
+
+# overwrites
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+#flatpak
+#alias wezterm='flatpak run org.wezfurlong.wezterm'
+
+# git
+alias gst='git status'
+
+# vim
+alias vim='nvim'

@@ -1,0 +1,12 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+[ -f ~/.config/shell_aliases ] && source ~/.config/shell_aliases
+
+PS1='[\u@\h \W]\$ '
+
+export SSH_AUTH_SOCK=/home/elton/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
