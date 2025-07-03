@@ -10,7 +10,7 @@ local config = wezterm.config_builder()
 config.color_scheme = 'tokyonight' --'Batman' 'AdventureTime'
 
 -- Font
-config.font = wezterm.font 'JetBrains Mono'
+config.font = wezterm.font("JetBrains Mono", {weight="Regular", stretch="Normal", style="Normal"})
 
 -- Enable scroll to prompt - https://wezterm.org/config/lua/keyassignment/ScrollToPrompt.html
 local act = wezterm.action
