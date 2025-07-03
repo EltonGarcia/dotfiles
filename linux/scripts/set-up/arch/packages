@@ -17,3 +17,5 @@ libnewt
 swaync
 wofi
 waybar
+
+brightnessctl
