@@ -1,3 +1,17 @@
+/*
+Tokyonight colors
+black = "#32344a"
+blue = "#7aa2f7"
+cyan = "#449dab"
+green = "#9ece6a"
+magenta = "#ad8ee6"
+red = "#f7768e"
+white = "#787c99"
+yellow = "#e0af68"
+background = "#1a1b26"
+foreground = "#a9b1d6"
+*/
+
 * {
     font-family: "JetBrainsMono Nerd Font, monospace, sans-serif";
     font-weight: bold;
@@ -6,7 +20,7 @@
 
 window#waybar {
     border-radius: 16px;
-    color: rgba(217, 216, 216, 1);
+    color: #a9b1d6;
     background: #1a1b26;
 }
 
@@ -21,7 +35,7 @@ tooltip {
 }
 
 tooltip label {
-    color: #93B1A6;
+    color: #7aa2f7;
 }
 
 #workspaces {
@@ -57,11 +71,13 @@ tooltip label {
     color: white;
 }
 
+/*
 #workspaces button:hover {
     box-shadow: inherit;
     border-color: #bb9af7;
     color: #bb9af7;
 }
+*/
 
 /* Repeat style here to ensure properties are overwritten as there's no !important and button:hover above resets the colour */
 
@@ -76,7 +92,7 @@ tooltip label {
 
 #workspaces button.active,
 #workspaces button.active:hover {
-    background: #a9b1d6;
+    background: #7aa2f7;
     color: #0d1117;
 }
 

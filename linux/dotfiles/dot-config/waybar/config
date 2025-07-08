@@ -118,10 +118,10 @@
         "tooltip-format": "{calendar}",
         "calendar": {
             "format": {
-                "months": "<span color='#D3D04F'><b>{}</b></span>",
+                "months": "<span color='#E0AF68'><b>{}</b></span>",
                 "days": "<span color='#93B1A6'><b>{}</b></span>",
-                "weekdays": "<span color='#8EAC50'><b>{}</b></span>",
-                "today": "<span color='#8EAC50'><b><u>{}</u></b></span>"
+                "weekdays": "<span color='#7AA2F7'><b>{}</b></span>",
+                "today": "<span color='#7AA2F7'><b><u>{}</u></b></span>"
             }
         }
     },
