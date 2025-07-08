@@ -6,8 +6,8 @@
 
 window#waybar {
     border-radius: 16px;
-    background: #0d1117;
-    color: #93B1A6;
+    color: rgba(217, 216, 216, 1);
+    background: #1a1b26;
 }
 
 #window {
@@ -34,23 +34,49 @@ tooltip label {
     min-width: 28px;
     border-radius: 20px;
     margin: 8px 0;
+    color: #a9b1d6;
 }
 
 #workspaces button:not(:last-child) {
     margin-right: 4px;
 }
 
-#workspaces button:hover {
-    background: rgba(255, 255, 255, 0.08);
+/*
+#workspaces button.visible {
+    color: #a9b1d6;
+}
+*/
+
+#workspaces button.focused {
+    border-top: 3px solid #7aa2f7;
+    border-bottom: 3px solid #7aa2f7;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: #a96d1f;
+    color: white;
 }
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    border-color: #bb9af7;
+    color: #bb9af7;
+}
+
+/* Repeat style here to ensure properties are overwritten as there's no !important and button:hover above resets the colour */
+
+/*
+#workspaces button.focused {
+    color: #7aa2f7;
+}
+#workspaces button.focused:hover {
+    color: #bb9af7;
+}
+*/
 
 #workspaces button.active,
 #workspaces button.active:hover {
-    background: #5C8374;
+    background: #a9b1d6;
     color: #0d1117;
 }
 
@@ -79,11 +105,15 @@ tooltip label {
 }
 
 #battery.warning {
-    color: orange;
+    color: rgba(255, 210, 4, 1);
 }
 
 #battery.critical {
-    color: red;
+    color: rgba(238, 46, 36, 1);
+}
+
+#battery.charging {
+    color: rgba(217, 216, 216, 1);
 }
 
 #temperature.critical {
@@ -93,4 +123,11 @@ tooltip label {
 #custom-power {
     padding-right: 16px;
     border-radius: 0 16px 16px 0;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
 }
