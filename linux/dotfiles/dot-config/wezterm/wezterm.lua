@@ -5,6 +5,8 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
+-- Fix for Hyprland
+config.enable_wayland = false
 
 -- Color scheme
 config.color_scheme = 'tokyonight' --'Batman' 'AdventureTime'
