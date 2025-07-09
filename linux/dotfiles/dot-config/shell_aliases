@@ -6,6 +6,8 @@ alias la='ls -A'
 alias ll='ls -alF'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias ip='ip -color=auto'
+alias diff='diff --color=auto'
 
 #flatpak
 #alias wezterm='flatpak run org.wezfurlong.wezterm'
@@ -15,3 +17,7 @@ alias gst='git status'
 
 # vim
 alias vim='nvim'
+
+# man colors
+export MANPAGER="less -R --use-color -Dd+r -Du+b"
+export MANROFFOPT="-P -c"
