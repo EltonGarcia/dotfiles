@@ -46,5 +46,11 @@ source "$HOME"/.config/zsh/wezterm.zsh
 source "$HOME/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
+# fzf
+source <(fzf --zsh)
+
+# zoxide
+eval "$(zoxide init zsh)"
+
 # starship 
 eval "$(starship init zsh)"
