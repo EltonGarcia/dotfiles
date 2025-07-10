@@ -52,5 +52,8 @@ source <(fzf --zsh)
 # zoxide
 eval "$(zoxide init zsh)"
 
+# ripgrep
+export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME"/ripgrep/ripgreprc
+
 # starship 
 eval "$(starship init zsh)"
