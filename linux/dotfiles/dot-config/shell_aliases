@@ -18,6 +18,17 @@ alias gst='git status'
 # vim
 alias vim='nvim'
 
+# copy and paste
+alias pp='wl-paste'
+alias pee='pp | tee >(vipe | pc)'
+alias ppc="$(pp)"
+alias cb='wl-copy'
+alias tcb='tee >(cb)'
+alias pc='wl-copy'
+alias tpc='tee >(pc)'
+alias pclc='fc -ln -1 | tpc'
+alias pcc='pclc'
+
 # man colors
 export MANPAGER="less -R --use-color -Dd+r -Du+b"
 export MANROFFOPT="-P -c"
