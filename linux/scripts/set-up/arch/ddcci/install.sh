@@ -30,9 +30,14 @@ SVC_NAME="ddcci@.service"
 SVC_DEST="/etc/systemd/system/$SVC_NAME"
 install_if_missing "./$SVC_NAME" "$SVC_DEST"
 
-RULE_NAME="99-ddcci.rules"
-RULE_DEST="/etc/udev/rules.d/$RULE_NAME"
-install_if_missing "./$RULE_NAME" "$RULE_DEST"
+DDCCI_SVC_RULE="99-ddcci.rules"
+DDCCI_SVC_RULE_DEST="/etc/udev/rules.d/$DDCCI_SVC_RULE"
+install_if_missing "./$DDCCI_SVC_RULE" "$DDCCI_SVC_RULE_DEST"
+
+# Evaluate if required
+#DDCCI_I2C_RULE="60-ddcutil-i2c.rules"
+#DDCCI_I2C_RULE_DEST="/etc/udev/rules.d/$DDCCI_I2C_RULE"
+#install_if_missing "./$DDCCI_I2C_RULE" "$DDCCI_I2C_RULE_DEST"
 
 # Reload daemons and rules
 systemctl daemon-reexec
