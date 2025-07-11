@@ -17,6 +17,10 @@ alias gst='git status'
 
 # vim
 alias vim='nvim'
+alias vi='nvim'
+alias vimdiff='nvim -d'
+alias vij="nvim -c 'set filetype=json' -"
+alias viy="nvim -c 'set filetype=yaml' -"
 
 # copy and paste
 alias pp='wl-paste'
