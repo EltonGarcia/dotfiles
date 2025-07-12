@@ -25,7 +25,6 @@ alias viy="nvim -c 'set filetype=yaml' -"
 # copy and paste
 alias pp='wl-paste'
 alias pee='pp | tee >(vipe | pc)'
-alias ppc="$(pp)"
 alias cb='wl-copy'
 alias tcb='tee >(cb)'
 alias pc='wl-copy'
