@@ -23,7 +23,7 @@ set -o vi # set zsh to use vi-style line editing
 bindkey -v # set 'viins' keymap - view keybinds: bindkey -M viins
 #bindkey -e # set 'emacs' keymap - view keybinds: bindkey -M emacs
 
-# Custom key-binds
+# custom keybinds
 bindkey -M viins 'jj' vi-cmd-mode
 #bindkey -M viins "^@" set-mark-command
 bindkey -M viins "^A" beginning-of-line
@@ -39,6 +39,11 @@ bindkey -M viins "^Q" push-line
 #bindkey -M viins "^S" history-incremental-search-forward
 bindkey -M viins "^K" kill-line
 bindkey -M viins "^W" backward-kill-word
+
+# enable edit command line in vim (CTRL+X, CTRL+E)
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M viins "^X^E" edit-command-line
 
 # alias
 [ -f ~/.config/shell_aliases ] && source ~/.config/shell_aliases
