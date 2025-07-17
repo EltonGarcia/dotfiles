@@ -11,3 +11,6 @@ sudo systemctl enable nvidia-resume.service
 
 # enable waybar through uwsm: https://wiki.hypr.land/Useful-Utilities/Status-Bars/#how-to-launch
 systemctl --user enable --now waybar.service
+
+# create secrets
+../private/configure-secrets.sh
