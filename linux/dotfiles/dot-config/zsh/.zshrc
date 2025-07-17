@@ -55,12 +55,19 @@ export SSH_AUTH_SOCK="$HOME"/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-
 # hyprland
 # UWSM - Universal Wayland Session Manager
 if uwsm check may-start && uwsm select; then
-	exec uwsm start default
+  exec uwsm start default
 fi
 
 # neovim
 export EDITOR='nvim'
 #export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
+# secrets
+if [ -f "$HOME/.config/private/private.sh" ]; then
+  source "$HOME/.config/private/private.sh"
+else
+  echo "missing secrets file at: $HOME/.config/private/private.sh" >&2
+fi
 
 # wezterm
 source "$HOME"/.config/wezterm/assets/shell-integration/wezterm.sh
