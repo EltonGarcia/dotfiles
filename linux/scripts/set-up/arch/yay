@@ -1,5 +1,7 @@
 # yay -S to compile packages
 
+gemini-cli
+
 # Log colorizer
 logalize
 quickshell

@@ -21,6 +21,8 @@ swaync
 wofi
 waybar
 
+tmux
+
 ddcutil
 brightnessctl
 
