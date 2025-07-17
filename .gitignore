@@ -1,2 +1,5 @@
 # Ignore vim swap files
 *.swp
+
+# Secret keys file
+linux/dotfiles/dot-config/private/private.sh

@@ -1,0 +1,14 @@
+#!/bin/bash
+# This is a template for your private API keys and other secrets.
+#
+# To use this, make a copy of it named 'private.sh':
+# cp private.sh.template private.sh
+#
+# Then, fill in your actual secrets in 'private.sh'.
+# This 'private.sh' file is ignored by Git, so your secrets will not be committed.
+
+# HELP: Input the Gemini CLI project key from https://aistudio.google.com/apikey or https://console.cloud.google.com/apis/credentials
+export PERSONAL_GEMINI_CLI_API_KEY="GEMINI_CLI_API_KEY_HERE"
+
+# HELP: Input your GitHub API token from https://github.com/settings/tokens
+export GITHUB_TOKEN="YOUR_GITHUB_TOKEN_HERE"
