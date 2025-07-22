@@ -1,0 +1,10 @@
+default partial alphanumeric_keys
+xkb_symbols "intl_custom" {
+    include "us(altgr-intl)"
+    name[Group1]= "English (US, intl., custom)";
+
+    key <AC11> {
+        type= "FOUR_LEVEL_SEMIALPHABETIC",
+        symbols[Group1]= [ dead_acute, quotedbl, apostrophe, dead_diaeresis ]
+    };
+};

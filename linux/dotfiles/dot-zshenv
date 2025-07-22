@@ -1,1 +1,2 @@
 ZDOTDIR=$HOME/.config/zsh
+XKB_CONFIG_ROOT=$HOME/.config/xkb
