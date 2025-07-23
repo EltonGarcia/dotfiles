@@ -89,3 +89,8 @@ export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME"/ripgrep/ripgreprc
 
 # starship 
 eval "$(starship init zsh)"
+
+# start tmux
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  tmux attach-session -t default || tmux new-session -s default
+fi
