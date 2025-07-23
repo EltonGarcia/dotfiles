@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 INCREASE="10%+"
 DECREASE="10%-"
 
@@ -12,6 +14,10 @@ while getopts "di" arg; do
       ;;
     i)
       ACTION="$INCREASE"
+      ;;
+    \?)
+      echo "Usage: $(basename "$0") [-d|-i]" >&2
+      exit 1
       ;;
   esac
 done
