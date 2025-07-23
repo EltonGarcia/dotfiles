@@ -91,6 +91,12 @@ export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME"/ripgrep/ripgreprc
 eval "$(starship init zsh)"
 
 # start tmux
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  tmux attach-session -t default || tmux new-session -s default
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]]; then
+  if [ -z "$TMUX" ] && tmux ls -F "#{session_name}" | grep -Fqx "default"; then
+    # creates a new session if a new terminal window is created
+    tmux new-session
+  else
+    # creates or attaches to the default session
+    tmux attach-session -t default || tmux new-session -s default
+  fi
 fi
