@@ -81,7 +81,7 @@
     "buttons-grid": {
       "actions": [
         {
-          "label": "直",
+          "label": "wifi",
           "type": "toggle",
           "active": true,
           "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
