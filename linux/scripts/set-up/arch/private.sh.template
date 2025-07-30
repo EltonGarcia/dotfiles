@@ -1,0 +1,10 @@
+#!/bin/bash
+# This is a template for your private API keys and other secrets.
+# The 'configure-secrets.sh' script will use this to generate
+# an encrypted 'secrets.sh.gpg' file.
+
+# HELP: Input the Gemini CLI key from https://aistudio.google.com/apikey
+export MY_API_KEY="YOUR_API_KEY_HERE"
+
+# HELP: Input your GitHub API token from https://github.com/settings/tokens
+export GITHUB_TOKEN="YOUR_GITHUB_TOKEN_HERE"
