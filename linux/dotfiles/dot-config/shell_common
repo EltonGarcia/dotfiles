@@ -1,0 +1,57 @@
+# alias and env variables imported in bash and zsh
+
+#####################
+### Env Variables ###
+#####################
+
+# man colors
+export MANPAGER="less -R --use-color -Dd+r -Du+b"
+export MANROFFOPT="-P -c"
+
+# bitwarden
+export SSH_AUTH_SOCK="$HOME"/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock #"$HOME"/.bitwarden-ssh-agent.sock
+
+# neovim
+export EDITOR='nvim'
+
+# ripgrep
+export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME"/ripgrep/ripgreprc
+
+# libvirt URI for qemu virtual machines
+export LIBVIRT_DEFAULT_URI='qemu:///system'
+
+###############
+### Aliases ###
+###############
+
+# overwrites
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip -color=auto'
+alias diff='diff --color=auto'
+
+# git
+alias gst='git status'
+
+# vim
+alias vim='nvim'
+alias vi='nvim'
+alias vimdiff='nvim -d'
+alias vij="nvim -c 'set filetype=json' -"
+alias viy="nvim -c 'set filetype=yaml' -"
+
+# copy and paste
+alias pp='wl-paste'
+alias pee='pp | tee >(vipe | pc)'
+alias cb='wl-copy'
+alias tcb='tee >(cb)'
+alias pc='wl-copy'
+alias tpc='tee >(pc)'
+alias pclc='fc -ln -1 | tpc'
+alias pcc='pclc'
+
+#flatpak
+#alias wezterm='flatpak run org.wezfurlong.wezterm'

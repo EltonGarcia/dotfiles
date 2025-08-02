@@ -19,24 +19,16 @@ setopt beep
 stty -ixon
 
 # alias
-[ -f "$HOME/.config/shell_aliases" ] && source "$HOME/.config/shell_aliases"
+[ -f "$HOME/.config/shell_common" ] && source "$HOME/.config/shell_common"
 
 # zsh vi-mode
 [ -f "$HOME/.config/zsh/vi-mode.zsh" ] && source "$HOME/.config/zsh/vi-mode.zsh"
-
-# bitwarden
-#export SSH_AUTH_SOCK="$HOME"/.bitwarden-ssh-agent.sock
-export SSH_AUTH_SOCK="$HOME"/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
 
 # hyprland
 # UWSM - Universal Wayland Session Manager
 if uwsm check may-start && uwsm select; then
   exec uwsm start default
 fi
-
-# neovim
-export EDITOR='nvim'
-#export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 # secrets
 if [ -f "$HOME/.config/private/private.sh" ]; then
@@ -59,9 +51,6 @@ source <(fzf --zsh)
 
 # zoxide
 eval "$(zoxide init zsh)"
-
-# ripgrep
-export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME"/ripgrep/ripgreprc
 
 # starship 
 eval "$(starship init zsh)"
