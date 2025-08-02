@@ -18,35 +18,11 @@ setopt beep
 # disable XON/XOFF used to pause terminal output (CTRL+S) and resume (CTRL+Q)
 stty -ixon
 
-# Bindkeys - view: man zshzle
-set -o vi # set zsh to use vi-style line editing
-bindkey -v # set 'viins' keymap - view keybinds: bindkey -M viins
-#bindkey -e # set 'emacs' keymap - view keybinds: bindkey -M emacs
-
-# custom keybinds
-bindkey -M viins 'jj' vi-cmd-mode
-#bindkey -M viins "^@" set-mark-command
-bindkey -M viins "^A" beginning-of-line
-bindkey -M viins "^E" end-of-line
-#bindkey -M viins "^B" backward-char
-#bindkey -M viins "^F" forward-char
-bindkey -M viins "^G" send-break
-#bindkey -M viins "^M" accept-line
-bindkey -M viins "^P" up-line-or-history
-bindkey -M viins "^N" down-line-or-history
-bindkey -M viins "^O" accept-line-and-down-history
-bindkey -M viins "^Q" push-line
-#bindkey -M viins "^S" history-incremental-search-forward
-bindkey -M viins "^K" kill-line
-bindkey -M viins "^W" backward-kill-word
-
-# enable edit command line in vim (CTRL+X, CTRL+E)
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey -M viins "^X^E" edit-command-line
-
 # alias
-[ -f ~/.config/shell_aliases ] && source ~/.config/shell_aliases
+[ -f "$HOME/.config/shell_aliases" ] && source "$HOME/.config/shell_aliases"
+
+# zsh vi-mode
+[ -f "$HOME/.config/zsh/vi-mode.zsh" ] && source "$HOME/.config/zsh/vi-mode.zsh"
 
 # bitwarden
 #export SSH_AUTH_SOCK="$HOME"/.bitwarden-ssh-agent.sock
