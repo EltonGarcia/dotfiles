@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+#
+# Requires atd services initiation
+#   sudo systemctl status atd
+
 function remind () {
   local COUNT="$#"
   local COMMAND="$1"
@@ -58,3 +62,5 @@ function remind () {
   echo "notify-send '$MESSAGE' 'Reminder' -u critical" | at $TIME 2>/dev/null
   echo "Notification scheduled at $TIME"
 }
+
+remind "$@"

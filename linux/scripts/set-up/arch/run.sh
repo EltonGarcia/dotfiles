@@ -12,5 +12,8 @@ sudo systemctl enable nvidia-resume.service
 # enable waybar through uwsm: https://wiki.hypr.land/Useful-Utilities/Status-Bars/#how-to-launch
 systemctl --user enable --now waybar.service
 
+# enable atd service used by remind script with at library
+sudo systemctl enable atd
+
 # create secrets
 ../private/configure-secrets.sh
