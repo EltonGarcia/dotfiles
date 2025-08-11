@@ -36,3 +36,6 @@ nvtop
 at
 
 glow
+
+# required by ollama
+nvidia-container-toolkit
