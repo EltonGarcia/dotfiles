@@ -46,6 +46,7 @@ alias viy="nvim -c 'set filetype=yaml' -"
 
 # copy and paste
 alias pp='wl-paste'
+alias pps='_dquote'
 alias pee='pp | tee >(vipe | pc)'
 alias cb='wl-copy'
 alias tcb='tee >(cb)'
@@ -56,3 +57,9 @@ alias pcc='pclc'
 
 #flatpak
 #alias wezterm='flatpak run org.wezfurlong.wezterm'
+
+
+_dquote() {
+  content=$(pp)
+  printf '"%s"' "$content"
+}
