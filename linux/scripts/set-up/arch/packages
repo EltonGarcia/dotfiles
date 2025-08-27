@@ -37,5 +37,7 @@ at
 
 glow
 
+surfraw
+
 # required by ollama
 nvidia-container-toolkit
