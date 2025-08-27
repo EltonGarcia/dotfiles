@@ -1,0 +1,29 @@
+#!/bin/sh
+# elvis: linkedin	-- Search LinkedIn
+# Author: elton santana
+
+. surfraw || exit 1
+
+w3_usage_hook () {
+    cat <<EOF
+
+Usage: $w3_argv0 [options] [search-string]
+Description:
+ Search LinkedIn (https://linkedin.com)
+
+EOF
+    w3_global_usage
+}
+
+w3_config
+w3_parse_args "$@"
+
+url="https://www.linkedin.com"
+
+# No arguments passed
+if [ -z "$w3_args" ]; then
+    w3_browse_url "$url"
+else
+    escaped_args=$(w3_url_of_arg $w3_args)
+    w3_browse_url "${url}/search/results/all/?keywords=${escaped_args}"
+fi
