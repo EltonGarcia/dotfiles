@@ -4,6 +4,10 @@
 
 . surfraw || exit 1
 
+w3_config_hook () {
+    def SURFRAW_linkedin_filter all
+}
+
 w3_usage_hook () {
     cat <<EOF
 
@@ -13,6 +17,31 @@ Description:
 
 EOF
     w3_global_usage
+}
+mkopts companies people groups schools
+
+w3_complete_hook_opt ()
+{
+    local opt="$1"
+    case "$opt" in
+        -filter=*) echo all companies people groups schools ;;
+        *) return 1 ;;
+    esac
+}
+
+w3_parse_option_hook () {
+    opt="$1"
+    optarg="$2"
+    case "$opt" in
+    -f*=*)      setopt   SURFRAW_linkedin_filter "$optarg" ;;
+    -a*)        setopt   SURFRAW_linkedin_filter all       ;;
+    -c*)        setopt   SURFRAW_linkedin_filter companies ;;
+    -p*)        setopt   SURFRAW_linkedin_filter people    ;;
+    -g*)        setopt   SURFRAW_linkedin_filter groups    ;;
+    -s|-news)   setopt   SURFRAW_linkedin_filter schools   ;;
+    *) return 1 ;;
+    esac
+    return 0
 }
 
 w3_config
@@ -25,5 +54,5 @@ if [ -z "$w3_args" ]; then
     w3_browse_url "$url"
 else
     escaped_args=$(w3_url_of_arg $w3_args)
-    w3_browse_url "${url}/search/results/all/?keywords=${escaped_args}"
+    w3_browse_url "${url}/search/results/${SURFRAW_linkedin_filter}/?keywords=${escaped_args}"
 fi
