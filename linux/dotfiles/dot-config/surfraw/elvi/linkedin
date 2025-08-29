@@ -18,7 +18,7 @@ Description:
 EOF
     w3_global_usage
 }
-mkopts companies people groups schools
+#mkopts companies people groups schools
 
 w3_complete_hook_opt ()
 {
