@@ -15,6 +15,23 @@ Usage: $w3_argv0 [options] [search-string]
 Description:
  Search LinkedIn (https://linkedin.com)
 
+Local options:
+ -sort=CATEGORIES
+ -s=CATEGORIES
+          new           |   Most recently asked (default)
+          feat          |   Questions with open bounties
+          vote          |   Questions with most votes
+          active        |   Recently active
+          null          |   No upvoted answers
+          faq           |   Questions with the most links
+                            Default: new
+
+ -u                     |   Search Unix & Linux Exchange
+                            Default: no
+
+ -num=NUMBER            |   Number of results per page
+                            Default: $SURFRAW_stack_results
+
 EOF
     w3_global_usage
 }
