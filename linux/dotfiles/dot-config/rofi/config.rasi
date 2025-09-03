@@ -5,6 +5,8 @@ configuration {
   kb-row-down: "Control+j,Down";
   kb-row-up:   "Control+k,Up";
   kb-remove-to-eol: "";
+  kb-element-next: ""; /*Unset default Tab*/
+  kb-row-select: "Tab"; /*Use Tab to select an item*/
 
   kb-custom-1:  "Super+1";
   kb-custom-2:  "Super+2";

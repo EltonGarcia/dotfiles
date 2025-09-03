@@ -1,0 +1,7 @@
+customProviders [
+  {
+    name: glassdoor
+    url: "https://www.glassdoor.com.br/Search/results.htm?keyword=%s"
+    tags: [gl]
+  }
+]
