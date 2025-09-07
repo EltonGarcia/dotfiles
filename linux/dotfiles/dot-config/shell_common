@@ -58,6 +58,9 @@ alias pcc='pclc'
 #flatpak
 #alias wezterm='flatpak run org.wezfurlong.wezterm'
 
+#docker
+alias gitleaks='docker run -v $PWD:/path zricethezav/gitleaks:latest git /path'
+alias trufflehog='docker run --rm -it -v "$PWD:/pwd" trufflesecurity/trufflehog:latest' # usage: trufflehog github --repo https://github.com/{owner}/{repo}
 
 _dquote() {
   content=$(pp)
