@@ -1,19 +1,25 @@
 #!/usr/bin/env bash
 
 # enable bluetooth
-sudo systemctl enable bluetooth
-sudo systemctl start bluetooth
+systemctl enable bluetooth
+systemctl start bluetooth
 
 # enable nvidia daemons
-sudo systemctl enable nvidia-suspend.service
-sudo systemctl enable nvidia-hibernate.service
-sudo systemctl enable nvidia-resume.service
+systemctl enable nvidia-suspend.service
+systemctl enable nvidia-hibernate.service
+systemctl enable nvidia-resume.service
 
 # enable waybar through uwsm: https://wiki.hypr.land/Useful-Utilities/Status-Bars/#how-to-launch
 systemctl --user enable --now waybar.service
 
 # enable atd service used by remind script with at library
-sudo systemctl enable atd
+systemctl enable atd
+
+
+# docker
+systemctl enable docker.service
+usermod -aG docker $USER
+newgrp docker
 
 # create secrets
 ../private/configure-secrets.sh

@@ -37,7 +37,8 @@ at
 
 glow
 
-surfraw
+docker
+docker-compose
 
 # required by ollama
 nvidia-container-toolkit
