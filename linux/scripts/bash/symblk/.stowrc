@@ -1,0 +1,3 @@
+--target=/usr/local/bin
+--dotfiles
+--ignore=.stowrc
