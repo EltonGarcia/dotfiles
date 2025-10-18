@@ -1,6 +1,11 @@
 Host *
   KexAlgorithms curve25519-sha256,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256
 
+Host github.com
+  User git
+  #ForwardAgent yes
+  IdentityAgent "/home/elton/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"
+
 Host lima-default
   IdentityFile "/home/elton/.lima/_config/user"
   StrictHostKeyChecking no
@@ -16,9 +21,15 @@ Host lima-default
   ControlMaster auto
   ControlPath "/home/elton/.lima/default/ssh.sock"
   ControlPersist yes
-  ForwardX11 yes
   Hostname 127.0.0.1
   Port 60022
+  ForwardAgent yes
+  ForwardX11 yes
+  #XAuthLocation /usr/bin/xauth
+  #SendEnv TMUX
+  #RemoteForward 10008 localhost:10008
+  #LocalCommand /bin/bash -c 'nc -z localhost 10008 && echo "pasteboard port 10008 listener already active" || while true; do nc -l localhost 10008 | pc; echo updated_pasteboard; done' & 
+  #PermitLocalCommand yes
 
 Host remote-vm-host
   Hostname 127.0.0.1

@@ -9,7 +9,11 @@ export MANPAGER="less -R --use-color -Dd+r -Du+b"
 export MANROFFOPT="-P -c"
 
 # bitwarden
-export SSH_AUTH_SOCK="$HOME"/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock #"$HOME"/.bitwarden-ssh-agent.sock
+# SSH forwarding agent, replaced global var by .ssh/config.
+# flatpak
+#export SSH_AUTH_SOCK="$HOME"/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
+# snap
+#export SSH_AUTH_SOCK="$HOME"/.bitwarden-ssh-agent.sock
 
 # neovim
 export EDITOR='nvim'
@@ -19,6 +23,9 @@ export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME"/ripgrep/ripgreprc
 
 # libvirt URI for qemu virtual machines
 export LIBVIRT_DEFAULT_URI='qemu:///system'
+
+# lima
+export LIMA_SSH_PORT_FORWARDER=true ## enable SSH forwarding, alternatively: LIMA_SSH_PORT_FORWARDER=true limactl start
 
 ###############
 ### Aliases ###
