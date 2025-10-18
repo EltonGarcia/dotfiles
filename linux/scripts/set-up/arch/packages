@@ -9,6 +9,8 @@ wezterm
 wl-clipboard
 ttf-jetbrains-mono-nerd
 
+openbsd-netcat
+
 tree
 
 hyprland
@@ -29,6 +31,7 @@ ddcutil
 brightnessctl
 
 chromium
+discord
 
 switcheroo-control
 
