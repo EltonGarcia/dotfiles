@@ -9,8 +9,6 @@ wezterm
 wl-clipboard
 ttf-jetbrains-mono-nerd
 
-openbsd-netcat
-
 tree
 
 hyprland
@@ -42,6 +40,11 @@ glow
 
 docker
 docker-compose
+
+# packages for ssh
+openbsd-netcat
+inotify-tools
+socat
 
 # required by ollama
 nvidia-container-toolkit
