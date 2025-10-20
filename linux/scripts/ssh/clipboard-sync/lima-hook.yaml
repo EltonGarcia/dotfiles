@@ -1,0 +1,8 @@
+# To be added to ~/.lima/default/lima.yaml
+host:
+  on_start:
+    - echo "Starting clipboard sync for Lima VM..."
+    - ~/bin/lima-clip-sync.sh daemon
+  on_stop:
+    - echo "Stopping clipboard sync for Lima VM..."
+    - ~/bin/lima-clip-sync.sh stop
