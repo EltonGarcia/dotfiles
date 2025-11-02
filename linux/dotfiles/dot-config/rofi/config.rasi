@@ -38,6 +38,8 @@ configuration {
       sorting-method:    "name";
   }
 /*	modes: "window,drun,run,ssh";*/
+  modes: "window,drun,ssh,other";
+/*	  testing: "plugins/custom_scripts.sh";*/
 /*	font: "mono 12";*/
 /*	location: 0;*/
 /*	yoffset: 0;*/
