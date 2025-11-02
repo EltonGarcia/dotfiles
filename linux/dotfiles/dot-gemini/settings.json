@@ -1,6 +1,14 @@
 {
-  "theme": "Default",
-  "selectedAuthType": "gemini-api-key",
-  "preferredEditor": "neovim",
-  "vimMode": true
+  "general": {
+    "preferredEditor": "neovim",
+    "vimMode": true
+  },
+  "security": {
+    "auth": {
+      "selectedType": "gemini-api-key"
+    }
+  },
+  "ui": {
+    "theme": "Default"
+  }
 }
