@@ -1,5 +1,11 @@
 # alias and env variables imported in bash and zsh
 
+# vscode
+alias code='code --password-store="gnome-libsecret"'
+if [ "$VSCODE_INJECTION" = "1" ]; then
+    export EDITOR="code --wait" # or 'code-insiders' if you're using VS Code Insiders
+fi
+
 #####################
 ### Env Variables ###
 #####################
