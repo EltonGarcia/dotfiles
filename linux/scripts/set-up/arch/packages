@@ -42,6 +42,12 @@ glow
 docker
 docker-compose
 
+# packages for nvim
+cargo
+rustup
+lua
+lua51
+
 # packages for ssh
 openbsd-netcat
 inotify-tools
