@@ -16,3 +16,5 @@
 # Set-up to sign commits
 #[commit]
 #        gpgsign = true
+[init]
+	defaultBranch = main
