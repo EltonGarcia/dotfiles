@@ -1,3 +1,8 @@
+[flavor]
+use = "tokyo-night"
+# For Yazi 0.4 and above
+dark = "tokyo-night"
+
 [mgr]
 ratio          = [ 1, 4, 3 ]
 sort_by        = "alphabetical"
