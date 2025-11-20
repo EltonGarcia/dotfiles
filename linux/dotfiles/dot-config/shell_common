@@ -69,6 +69,7 @@ alias pc='wl-copy -n' # use -n to remove newline
 alias tpc='tee >(pc)' # print and copy
 alias pclc='fc -ln -1 | tpc' # copy the last executed command to clipboard
 alias pcc='pclc'
+alias pwdtpc='pwd | tpc'
 
 # use clipboard content as parameter to the given command:
 # usage:
@@ -98,6 +99,12 @@ ppx() {
   "${args[@]}"
 }
 
+# double quote clipboard content
+_dquote() {
+  content=$(pp)
+  printf '"%s"' "$content"
+}
+
 #flatpak
 #alias wezterm='flatpak run org.wezfurlong.wezterm'
 
@@ -105,7 +112,11 @@ ppx() {
 alias gitleaks='docker run -v $PWD:/path zricethezav/gitleaks:latest git /path'
 alias trufflehog='docker run --rm -it -v "$PWD:/pwd" trufflesecurity/trufflehog:latest' # usage: trufflehog github --repo https://github.com/{owner}/{repo}
 
-_dquote() {
-  content=$(pp)
-  printf '"%s"' "$content"
+# yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
 }
