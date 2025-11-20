@@ -1,10 +1,50 @@
 {
     "git.openRepositoryInParentFolders": "never",
-    "vim.commandLineModeKeyBindings": [ ],
+    "vim.commandLineModeKeyBindings": [],
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
+    "vinormalModeKeyBindingsm.useCtrlKeys": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>", "a"],
+            "commands": ["workbench.view.explorer"]
+        },
+        /*
+        {
+            "before": ["g", "p", "d"],
+            "commands": ["editor.action.peekDefinition"]
+        },
+        {
+            "before": ["g", "h"],
+            "commands": ["editor.action.showDefinitionPreviewHover"]
+        },
+        {
+            "before": ["g", "i"],
+            "commands": ["editor.action.goToImplementation"]
+        },
+        {
+            "before": ["g", "p", "i"],
+            "commands": ["editor.action.peekImplementation"]
+        },
+        {
+            "before": ["g", "q"],
+            "commands": ["editor.action.quickFix"]
+        },
+        {
+            "before": ["g", "r"],
+            "commands": ["editor.action.referenceSearch.trigger"]
+        },
+        {
+            "before": ["g", "t"],
+            "commands": ["editor.action.goToTypeDefinition"]
+        },
+        {
+            "before": ["g", "p", "t"],
+            "commands": ["editor.action.peekTypeDefinition"]
+        }
+        */
+    ],
     "vim.hlsearch": true,
     "vim.insertModeKeyBindings": [
         {
@@ -35,5 +75,6 @@
     // To improve performance
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
-    }
+    },
+    "github.copilot.nextEditSuggestions.enabled": false
 }
