@@ -76,5 +76,6 @@
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
     },
-    "github.copilot.nextEditSuggestions.enabled": false
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "editor.lineNumbers": "relative"
 }
