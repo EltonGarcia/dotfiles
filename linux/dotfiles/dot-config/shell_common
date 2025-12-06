@@ -1,4 +1,6 @@
 # alias and env variables imported in bash and zsh
+#
+# Variables are also set with files from $XDG_CONFIG_HOME/environment.d
 
 # vscode
 alias code='code --password-store="gnome-libsecret"'
@@ -32,6 +34,9 @@ export LIBVIRT_DEFAULT_URI='qemu:///system'
 
 # lima
 export LIMA_SSH_PORT_FORWARDER=true ## enable SSH forwarding, alternatively: LIMA_SSH_PORT_FORWARDER=true limactl start
+
+# rofi
+export ROFI_SCRIPTS="$XDG_CONFIG_HOME/rofi/scripts"
 
 ###############
 ### Aliases ###

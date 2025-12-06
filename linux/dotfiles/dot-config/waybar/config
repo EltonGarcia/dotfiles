@@ -171,7 +171,7 @@
         "power-saver": ""
       }
     },
-     "network": {
+    "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-icons": [
         	"󰤟",
@@ -185,7 +185,8 @@
         "format-disconnected": "⚠",
         "tooltip-format": "{essid} ({signalStrength}%) - {ipaddr}/{cidr}",
         "tooltip-format-ethernet": "{ifname} - {gwaddr}",
-        "tooltip-format-disconnected": "Disconnected ⚠"
+        "tooltip-format-disconnected": "Disconnected ⚠",
+        "on-click": "$XDG_CONFIG_HOME/waybar/scripts/rofi.sh wifi-menu"
     },
     //"network": {
     //    // "interface": "wlp2*", // (Optional) To force the use of this interface
