@@ -54,6 +54,10 @@ lua
 lua51
 luarocks
 
+# tesseract and gui
+gimagereader-qt
+tesseract
+
 # packages for ssh
 openbsd-netcat
 inotify-tools
