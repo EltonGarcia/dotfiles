@@ -29,9 +29,12 @@
         "battery",
         "clock",
         "tray",
-	"custom/notification",
+        "custom/notification",
         "custom/power"
     ],
+    "hyprland/window": {
+        "separate-outputs": true
+    },
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
