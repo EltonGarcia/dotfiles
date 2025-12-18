@@ -1,9 +1,7 @@
 # yay -S to compile packages
 
 gemini-cli
-
 nordvpn-bin
-
 zoom
 
 # Log colorizer
