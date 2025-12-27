@@ -65,3 +65,8 @@ socat
 
 # required by ollama
 nvidia-container-toolkit
+
+# xwayland / xorg
+xorg-xlsclients
+xorg-xeyes
+xorg-xwininfo
