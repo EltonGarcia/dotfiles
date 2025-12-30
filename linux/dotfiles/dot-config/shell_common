@@ -25,6 +25,9 @@ alias bw='flatpak run --command=bw com.bitwarden.desktop'
 #   - snap
 #export SSH_AUTH_SOCK="$HOME"/.bitwarden-ssh-agent.sock
 
+# bws
+alias bws='BWS_ACCESS_TOKEN=$(secret-tool lookup "BWS" "ACCESS_TOKEN") bws'
+
 # neovim
 export EDITOR='nvim'
 
