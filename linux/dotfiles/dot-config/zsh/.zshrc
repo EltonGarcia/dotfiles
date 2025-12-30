@@ -13,6 +13,11 @@ HISTFILE=~/.config/histfile
 HISTSIZE=100000
 SAVEHIST=100000
 setopt beep
+# Enable 'Glob Operators' syntax.
+#   ref: https://zsh.sourceforge.io/Doc/Release/Expansion.html#Glob-Operators
+#   example (move all files except foo): mv dir/^foo dir/bar
+#   source: https://stackoverflow.com/questions/670460/move-all-files-except-one#comment95179748_670475
+setopt extended_glob 
 # End of lines configured by zsh-newuser-install
 
 # disable XON/XOFF used to pause terminal output (CTRL+S) and resume (CTRL+Q)
