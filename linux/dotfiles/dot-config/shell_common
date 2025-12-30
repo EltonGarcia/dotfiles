@@ -17,10 +17,12 @@ export MANPAGER="less -R --use-color -Dd+r -Du+b"
 export MANROFFOPT="-P -c"
 
 # bitwarden
-# SSH forwarding agent, replaced global var by .ssh/config.
-# flatpak
+# - CLI
+alias bw='flatpak run --command=bw com.bitwarden.desktop'
+# - SSH forwarding agent, replaced global var by .ssh/config.
+#   - flatpak
 #export SSH_AUTH_SOCK="$HOME"/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
-# snap
+#   - snap
 #export SSH_AUTH_SOCK="$HOME"/.bitwarden-ssh-agent.sock
 
 # neovim
