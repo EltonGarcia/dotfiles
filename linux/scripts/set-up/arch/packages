@@ -42,6 +42,8 @@ glow
 docker
 docker-compose
 
+#seahorse # gnome-secrets gui
+
 # packages for yazi
 yazi
 7zip
