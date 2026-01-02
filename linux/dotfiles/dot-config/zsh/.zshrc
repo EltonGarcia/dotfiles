@@ -1,3 +1,9 @@
+# Ghostty shell integration for zsh
+# required to enable jump to next/previous prompt in tmux copy-mode
+if [ -n "${GHOSTTY_RESOURCES_DIR}" ]; then
+    builtin source "${GHOSTTY_RESOURCES_DIR}/shell-integration/zsh/ghostty-integration"
+fi
+
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
