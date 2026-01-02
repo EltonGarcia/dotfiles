@@ -38,12 +38,16 @@ nvtop
 at
 
 glow
-qsv
 
 docker
 docker-compose
 
-#seahorse # gnome-secrets gui
+# csv tools
+qsv
+csvkit
+
+# gnome-secrets gui
+#seahorse
 
 # packages for yazi
 yazi
