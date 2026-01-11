@@ -1,7 +1,14 @@
 {
+  "theme": "GitHub",
+  "autoAccept": false,
+  "sandbox": "docker",
+  "vimMode": true,
+  "preferredEditor": "vscode",
+  "usageStatisticsEnabled": false,
   "general": {
     "preferredEditor": "neovim",
-    "vimMode": true
+    "vimMode": true,
+    "previewFeatures": true
   },
   "security": {
     "auth": {

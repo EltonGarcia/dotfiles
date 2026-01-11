@@ -1,0 +1,20 @@
+{
+  "theme": "GitHub",
+  "autoAccept": false,
+  "sandbox": "docker",
+  "vimMode": true,
+  "checkpointing": { "enabled": true },
+  "fileFiltering": { "respectGitIgnore": true },
+  "usageStatisticsEnabled": true,
+  "includeDirectories": ["../shared-library", "~/common-utils"],
+  "chatCompression": { "contextPercentageThreshold": 0.6 },
+  "customThemes": {
+    "MyCustomTheme": {
+      "name": "MyCustomTheme", "type": "custom",
+      "Background": "#181818", "Foreground": "#F8F8F2",
+      "LightBlue": "#82AAFF", "AccentBlue": "#61AFEF", "AccentPurple": "#C678DD",
+      "AccentCyan": "#56B6C2", "AccentGreen": "#98C379", "AccentYellow": "#E5C07B",
+      "AccentRed": "#E06C75", "Comment": "#5C6370", "Gray": "#ABB2BF"
+    }
+  }
+}
