@@ -2,6 +2,8 @@
 #
 # Requires atd services initiation
 #   sudo systemctl status atd
+# Create reminder
+#       remind "Sample remindeer" in 5 minutes
 
 function remind () {
   local COUNT="$#"
@@ -59,7 +61,7 @@ function remind () {
     return
   fi
   # Schedule the notification
-  echo "notify-send '$MESSAGE' 'Reminder' -u critical" | at $TIME 2>/dev/null
+  echo "notify-send '$MESSAGE' 'Reminder from $(date +%T)' -u critical" | at $TIME 2>/dev/null
   echo "Notification scheduled at $TIME"
 }
 
