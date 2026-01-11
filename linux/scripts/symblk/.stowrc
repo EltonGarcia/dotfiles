@@ -1,0 +1,3 @@
+--target=/usr/local/bin
+--ignore=set-up.sh
+--ignore=.stowrc
