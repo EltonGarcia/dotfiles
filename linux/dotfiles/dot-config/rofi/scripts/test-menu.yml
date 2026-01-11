@@ -1,0 +1,32 @@
+title: Test
+
+menus:
+  opt1:
+    label: "🔧 Opt 1"
+    items:
+      A:
+        label: "🅰 A"
+        command: "notify-send 'Opt 1 → A'"
+      B:
+        label: "🅱 B"
+        command: "notify-send 'Opt 1 → B'"
+      C:
+        label: "🅲 C"
+        command: "notify-send 'Opt 1 → C'"
+
+  opt2:
+    label: "⚙ Opt 2"
+    items:
+      D:
+        label: "🅳 D"
+        command: "notify-send 'Opt 2 → D'"
+      E:
+        label: "🅴 E"
+        command: "notify-send 'Opt 2 → E'"
+
+  opt3:
+    label: "📦 Opt 3"
+    items:
+      F:
+        label: "🅵 F"
+        command: "notify-send 'Opt 3 → F'"
