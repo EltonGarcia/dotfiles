@@ -1,11 +1,29 @@
 #!/usr/bin/env bash
+# To get display input names and codes:
+#   ddcutil capabilities --display 1 | grep -A5 "Input Source"
 
-CURRENT=$(ddcutil --display 1 getvcp 60 | awk '{print $NF}' | grep -o '0x[0-9a-fA-F]\+')
+set -eo pipefail
 
-# Get display input codes
-# ddcutil capabilities --display 1 | grep -A5 "Input Source"
-case "$CURRENT" in
-  0x0f) ddcutil --display 1 setvcp 60 0x11 ;; # DP → HDMI
-  0x11) ddcutil --display 1 setvcp 60 0x0f ;; # HDMI → DP
-  *) echo "Unknown input source: $CURRENT" ;;
+DISPLAY="$1"
+
+if [[ -z "$1" ]]; then
+  DISPLAY=1
+fi
+
+switch_to_hdmi() {
+  ddcutil --display $DISPLAY setvcp 60 0x11 
+}
+
+switch_to_dp() {
+  ddcutil --display $DISPLAY setvcp 60 0x0f
+}
+
+read name code < <(_get-display-input $DISPLAY)
+
+case "$name" in
+  0x0f) switch_to_hdmi;; # DP → HDMI
+  0x11) switch_to_dp ;; # HDMI → DP
+  DisplayPort*) switch_to_hdmi ;;
+  HDMI*) switch_to_dp ;;
+  *) echo "Unknown input source: $name" ;;
 esac
