@@ -11,8 +11,7 @@ fi
 #####################
 ###    Imports    ###
 #####################
-source shell_clipboard.sh
-
+source "$HOME/.config/shell_clipboard"
 
 #####################
 ### Env Variables ###
