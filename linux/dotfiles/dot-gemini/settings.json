@@ -5,6 +5,10 @@
   "vimMode": true,
   "preferredEditor": "vscode",
   "usageStatisticsEnabled": false,
+  "tools": {
+    "autoAccept": false,
+    "sandbox": "docker"
+  },
   "general": {
     "preferredEditor": "neovim",
     "vimMode": true,
@@ -16,6 +20,6 @@
     }
   },
   "ui": {
-    "theme": "Default"
+    "theme": "GitHub"
   }
 }
