@@ -31,6 +31,24 @@ Host lima-default
   #LocalCommand /bin/bash -c 'nc -z localhost 10008 && echo "pasteboard port 10008 listener already active" || while true; do nc -l localhost 10008 | pc; echo updated_pasteboard; done' & 
   #PermitLocalCommand yes
 
+Host arch2
+  IdentityFile "/home/elton/.lima/_config/user"
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+  NoHostAuthenticationForLocalhost yes
+  PreferredAuthentications publickey
+  Compression no
+  BatchMode yes
+  IdentitiesOnly yes
+  GSSAPIAuthentication no
+  Ciphers "^aes128-gcm@openssh.com,aes256-gcm@openssh.com"
+  User lima
+  ControlMaster auto
+  ControlPath "/home/elton/.lima/arch2/ssh.sock"
+  ControlPersist yes
+  Hostname 127.0.0.1
+  Port 45147
+
 Host remote-vm-host
   Hostname 127.0.0.1
   User elton
