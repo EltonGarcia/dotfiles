@@ -1,4 +1,3 @@
-
 # Bindkeys - view: man zshzle
 set -o vi # set zsh to use vi-style line editing
 bindkey -v # set 'viins' keymap - view keybinds: bindkey -M viins
@@ -23,6 +22,8 @@ bindkey -M viins "^Q" push-line
 #bindkey -M viins "^S" history-incremental-search-forward
 bindkey -M viins "^K" kill-line
 bindkey -M viins "^W" backward-kill-word
+
+bindkey -M viins '^[.' insert-last-word # use `ALT + .` to repeat the last command arg
 
 # Use vim keys in tab complete menu:
 #bindkey -M menuselect 'h' vi-backward-char
