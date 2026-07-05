@@ -1,0 +1,46 @@
+# arch.yaml
+vmType: qemu
+arch: x86_64
+
+# Get image info:
+# - qemu-img info ~/Documents/ISOs/Arch-Linux-x86_64-basic-20260415.515674.qcow2
+# - virt-filesystems --long -h --all -a ~/Documents/ISOs/Arch-Linux-x86_64-basic-20260415.515674.qcow2
+images:
+  - location: "file:///home/elton/Documents/ISOs/Arch-Linux-x86_64-cloudimg-20260501.523211.qcow2"
+    arch: "x86_64"
+
+user:
+  name: lima
+
+# Check host cpus and memory:
+# - nproc
+# - free -h
+cpus: 4
+memory: "4GiB"
+# Image already has a virtual disk, check using: qemu-img info $imagePath.qcow2
+disk: "10GiB"
+
+ssh:
+  loadDotSSHPubKeys: true
+
+## This is important: fix SSH + cloud-init issues
+#provision:
+#  - mode: system
+#    script: |
+#      # Ensure SSH is installed and running
+#      pacman -Sy --noconfirm openssh || true
+#      systemctl enable sshd || true
+#      systemctl start sshd || true
+#
+#      # Allow root login (Lima often connects as root initially)
+#      sed -i 's/^#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config || true
+#      systemctl restart sshd || true
+#
+#      # Debug marker
+#      echo "Provisioning complete" > /root/provisioned
+
+mounts:
+  - location: "/home/elton/workspace/lima-mmt/mmt-01"
+    writable: true
+
+mountType: virtiofs

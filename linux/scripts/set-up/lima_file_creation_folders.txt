@@ -1,0 +1,15 @@
+./libexec/
+./libexec/lima/
+./bin/docker.lima
+./bin/lima
+./bin/podman.lima
+./bin/nerdctl.lima
+./bin/apptainer.lima
+./bin/limactl
+./bin/kubectl.lima
+./share/
+./share/man/
+./share/man/man1/
+./share/lima/
+./share/doc/
+./share/doc/lima/
