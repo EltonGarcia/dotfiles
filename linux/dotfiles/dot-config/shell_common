@@ -64,6 +64,9 @@ alias tree='tree -C'
 
 # git
 alias gst='git status'
+alias gad='git add'
+alias gdff='git diff'
+alias gcmt='git commit -m'
 
 # vim
 alias vim='nvim'
