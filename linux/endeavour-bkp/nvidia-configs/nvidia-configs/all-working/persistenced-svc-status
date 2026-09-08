@@ -1,0 +1,15 @@
+● nvidia-persistenced.service - NVIDIA Persistence Daemon
+     Loaded: loaded (/usr/lib/systemd/system/nvidia-persistenced.service; enabled; preset: disabled)
+     Active: active (running) since Fri 2026-04-03 13:17:48 -03; 2 days ago
+ Invocation: 4a190fbed14d4f519ccd43a8ab5e2f64
+    Process: 959 ExecStart=/usr/bin/nvidia-persistenced --user nvidia-persistenced (code=exited, status=0/SUCCESS)
+   Main PID: 963 (nvidia-persiste)
+      Tasks: 1 (limit: 38171)
+     Memory: 964K (peak: 2.2M)
+        CPU: 9ms
+     CGroup: /system.slice/nvidia-persistenced.service
+             └─963 /usr/bin/nvidia-persistenced --user nvidia-persistenced
+
+abr 03 13:17:48 a62liv systemd[1]: Starting NVIDIA Persistence Daemon...
+abr 03 13:17:48 a62liv nvidia-persistenced[963]: Started (963)
+abr 03 13:17:48 a62liv systemd[1]: Started NVIDIA Persistence Daemon.

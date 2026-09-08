@@ -1,0 +1,15 @@
+linux 6.19.10.arch1-1
+linux-api-headers 6.19-1
+linux-firmware 20260309-1
+linux-firmware-amdgpu 20260309-1
+linux-firmware-atheros 20260309-1
+linux-firmware-broadcom 20260309-1
+linux-firmware-cirrus 20260309-1
+linux-firmware-intel 20260309-1
+linux-firmware-mediatek 20260309-1
+linux-firmware-nvidia 20260309-1
+linux-firmware-other 20260309-1
+linux-firmware-radeon 20260309-1
+linux-firmware-realtek 20260309-1
+linux-firmware-whence 20260309-1
+linux-headers 6.19.10.arch1-1

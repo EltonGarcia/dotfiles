@@ -1,0 +1,9 @@
+00:02.0 VGA compatible controller: Intel Corporation CometLake-H GT2 [UHD Graphics] (rev 05)
+	DeviceName: Onboard - Video
+	Subsystem: AIstone Global Limited Device 1099
+	Kernel driver in use: i915
+--
+01:00.0 VGA compatible controller: NVIDIA Corporation TU117M [GeForce GTX 1650 Ti Mobile] (rev a1)
+	Subsystem: AIstone Global Limited Device 1099
+	Kernel driver in use: nvidia
+	Kernel modules: nouveau, nvidia_drm, nvidia

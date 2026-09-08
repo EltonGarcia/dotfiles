@@ -1,0 +1,6 @@
+nvidia_drm            151552  32
+drm_ttm_helper         20480  1 nvidia_drm
+nvidia_modeset       2203648  5 nvidia_drm
+nvidia_uvm           2453504  0
+video                  81920  3 asus_wmi,i915,nvidia_modeset
+nvidia              16351232  253 nvidia_uvm,nvidia_modeset

@@ -1,0 +1,27 @@
+[Trigger]
+Type = Path
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Target = usr/lib/dracut/*
+Target = usr/lib/firmware/*
+Target = usr/src/*/dkms.conf
+
+[Trigger]
+Type = Path
+Operation = Install
+Operation = Upgrade
+Target = usr/lib/modules/*/vmlinuz
+
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Target = systemd
+
+[Action]
+Description = Running kernel-install...
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/kernel-install-hook add
+NeedsTargets

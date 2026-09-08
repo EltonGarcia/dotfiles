@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = lsb-release
+
+[Action]
+Description = Add EndeavourOS specific config.
+When = PostTransaction
+Exec = /usr/bin/eos-hooks-runner lsb-release

@@ -1,0 +1,3 @@
+○ nvidia-suspend.service - NVIDIA system suspend actions
+     Loaded: loaded (/usr/lib/systemd/system/nvidia-suspend.service; disabled; preset: disabled)
+     Active: inactive (dead)

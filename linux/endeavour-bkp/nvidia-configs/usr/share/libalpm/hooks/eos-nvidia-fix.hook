@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = nvidia-open
+Target = nvidia-open-lts
+
+[Action]
+When = PostTransaction
+Exec = /usr/bin/eos-nvidia-fix
